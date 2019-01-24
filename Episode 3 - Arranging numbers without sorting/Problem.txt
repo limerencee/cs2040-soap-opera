@@ -1,0 +1,11 @@
+Given a 4-digits number, do the following:
+1. check that at least one of the digit is different from the other three.
+     For example, 1333 is good but 3333 is not valid.
+2. Use the 4 digits from the original number to form the largest number.
+3. Use the 4 digits from the original number to form the smallest number.
+     For example, if the given number is 2315, the largest number formed is
+     5321 and the smallest number is 1235.
+
+You are not allowed to use any sorting method to sort the digits. You should
+not have if statements to rank the digits. You can consider these restrictions
+as hints on how to solve the problem.     

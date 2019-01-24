@@ -1,0 +1,23 @@
+RunAround number:
+An N-digit runaround number is characterized as follows:
+
+It is an integer with exactly N digits, each of which is between 1 and 9, inclusively.
+The digits form a sequence with each digit telling where the next digit in the sequence occurs. This is done by giving the number of digits to the right of the digit where the next digit in the sequence occurs. If necessary, counting wraps around from the rightmost digit back to the leftmost.
+The leftmost digit in the number is the first digit in the sequence, and the sequence must return to this digit after all digits in the number have been used exactly once.
+No digit will appear more than once in the number.
+For example, consider the number 81362. To verify that this is a runaround number, we use the steps shown below:
+
+Start with the leftmost digit, 8  1  3  6  2 
+Count 8 digits to the right, ending on 6 (note the wraparound)
+Count 6 digits to the right, ending on 2:
+Count 2 digits to the right, ending on 1:
+Count 1 digit to the right, ending on 3:
+Count 3 digits to the right, ending on 8 (where we began):
+Again for this episode, try to think of the sub-problems and think about how to
+solve each of the sub-problems. I am not expecting you to code the program 
+especially not Python program. 
+
+Just think about how many sub-problems are involved here and whetner
+some of the subproblems can be considered at the same time. 
+
+We will have a subsequent episode to consider incremental programming.

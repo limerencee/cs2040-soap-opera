@@ -1,0 +1,5 @@
+To begin our soap opera, we are interested to find out
+the number of days betwen two give dates. This could be
+used by some banking applications for calculating daily
+based interest, etc. The input are two dates in the format
+ddmmyyyy.

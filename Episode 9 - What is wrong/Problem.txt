@@ -1,0 +1,15 @@
+public class Test {
+     private int a = 0, b = 0;
+
+     private int add() {
+          return a + b;
+     }
+
+     public static void main(String[] args) {
+           a = 2;
+           b = 3;
+           System.out.println(add());
+      }
+}
+
+What is wrong with the above class? How to make it right?   

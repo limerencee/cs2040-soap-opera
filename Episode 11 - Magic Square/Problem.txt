@@ -1,0 +1,5 @@
+For this episode, please refer the this page http://www.math.hmc.edu/funfacts/ffiles/10001.4-8.shtml
+there is an algorithm to generate a N*N magic square where N is an odd number.
+
+Write a java program to implement the algorithm.  
+

@@ -1,0 +1,6 @@
+This is a variation of Episode 14. In this episode, the values in the linkedlist
+are not distinct and not sorted but you are allowed to use two other data
+structures in your solution. You can only traverse the linkedlists once and
+you are not allowed to go through what you stored in the data structures
+more than once.
+Remember you are to return the reference of the head of the common nodes.

@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -23,7 +24,7 @@ class Main {
         }
 
         Node<T> commonStart = null;
-        while (one.peek().compareTo(two.peek()) == 0) {
+        while (one.peek() == two.peek()) { //.equals() work as well.
             commonStart = one.pop();
             two.pop();
         }
@@ -35,15 +36,21 @@ class Main {
         BasicLinkedList<Integer> one = new BasicLinkedList<>();
         BasicLinkedList<Integer> two = new BasicLinkedList<>();
         BasicLinkedList<Integer> common = new BasicLinkedList<>();
-        one.add(4);
-        one.add(4);
-        one.add(2);
-        one.add(7);
-        one.add(3);
-        two.add(8);
-        two.add(1);
-        two.add(7);
-        two.add(3);
+        Node<Integer> a = new Node<>(4, Comparator.naturalOrder());
+        Node<Integer> b = new Node<>(4, Comparator.naturalOrder());
+        Node<Integer> c = new Node<>(2, Comparator.naturalOrder());
+        Node<Integer> d = new Node<>(7, Comparator.naturalOrder());
+        Node<Integer> e = new Node<>(3, Comparator.naturalOrder());
+        Node<Integer> f = new Node<>(8, Comparator.naturalOrder());
+        Node<Integer> g = new Node<>(1, Comparator.naturalOrder());
+        one.add(a);
+        one.add(b);
+        one.add(c);
+        one.add(d);
+        one.add(e);
+        two.add(f);
+        two.add(g);
+        two.add(d);
         System.out.println("BLL one: " + one.toString());
         System.out.println("BLL two: " + two.toString());
         common.add(getMatches(one.getHead(), two.getHead()));

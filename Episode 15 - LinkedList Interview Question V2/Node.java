@@ -8,7 +8,7 @@ class Node<T> {
 
     /**
     * Constructor to initalize an instance of Node <T>
-    * Forces a comparator input and assumes that it is of the correct type.
+    * Assumes that input comparator is of the correct type.
     */
     public Node(T data, Comparator comparator) {
         _data = data;

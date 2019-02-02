@@ -1,39 +1,18 @@
 /**
 * BasicLinkedList structure that contains a method getHead() to get the
 * head in the form of Node<T> instead of T (if using the LinkedList Java
-* library). Also contains constructor that takes in a custom comparator for
-* each Node<T>.
+* library).
 */
-import java.util.Comparator;
 
 class BasicLinkedList<T> {
 
     private Node<T> _head;
-    private Comparator _comparator;
 
     /**
     * Constructor, initializes BasicLinkedList head Node to null.
     */
     public BasicLinkedList() {
         _head = null;
-        _comparator = Comparator.naturalOrder();
-    }
-
-    public BasicLinkedList(Comparator comparator) {
-        _head = null;
-        _comparator = comparator;
-    }
-
-    /**
-    * Takes an input T and wrap it in a Node<T> object before inserting into the
-    * back of this BasicLinkedList object. Assumes that this BasicLinkedList has
-    * been initialized with the correct comparator.
-    * @param data - input T to be added to the back of this BasicLinkedList.
-    */
-    @SuppressWarnings("unchecked")
-    public void add(T data) {
-        Node<T> newNode = new Node(data, _comparator);
-        add(newNode);
     }
 
     /**

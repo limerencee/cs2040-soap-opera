@@ -1,0 +1,9 @@
+we have the final variation of the last two episodes.
+In this case, the values in the linkedlists are not unique and not
+sorted in any order but you are given the lengths of the two
+linkedlist.
+
+Write an algorithm to find the starting point of the merged linkedlist.
+
+You are not allowed to use any other data structure. You should not
+traverse the nodes in the list more than once.

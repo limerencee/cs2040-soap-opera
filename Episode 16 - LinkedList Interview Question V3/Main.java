@@ -8,25 +8,25 @@ class Main {
     * postCond: return a reference pointing to the first node of the common nodes of the two given lists.
     *           If there is no common nodes, return null
     */
-    static <T> BasicLinkedList<T> getMatches(BasicLinkedList<T> one, BasicLinkedList<T> two) {
-        int oneSize = one.getSize(); //for this question, ignore this traversal to get the size
-        int twoSize = two.getSize(); //since it is a given. this method call is for demo purposes only.
+    static <T> Node<T> getMatches(BasicLinkedList<T> one, BasicLinkedList<T> two) {
+        int oneCurrentSize = one.getSize(); //for this question, ignore this traversal to get the size
+        int twoCurrentSize = two.getSize(); //since it is a given. this method call is for demo purposes only.
+        Node<T> oneCurrent = one.getHead();
+        Node<T> twoCurrent = two.getHead();
 
-        while (oneSize > 0 && twoSize > 0) {
-            if (oneSize > twoSize) {
-                one.removeFirst();
-                oneSize--;
-            } else if (oneSize < twoSize) {
-                two.removeFirst();
-                twoSize--;
+        while (oneCurrentSize > 0 && twoCurrentSize > 0) {
+            if (oneCurrentSize > twoCurrentSize) {
+                oneCurrent = oneCurrent.getNext();
+                oneCurrentSize--;
+            } else if (oneCurrentSize < twoCurrentSize) {
+                twoCurrent = twoCurrent.getNext();
+                twoCurrentSize--;
             } else {
-                if (one.getHead() == two.getHead()) {
-                    return one;
-                }
-                one.removeFirst();
-                two.removeFirst();
-                oneSize--;
-                twoSize--;
+                if (oneCurrent == twoCurrent) return oneCurrent;
+                oneCurrent = oneCurrent.getNext();
+                twoCurrent = twoCurrent.getNext();
+                oneCurrentSize--;
+                twoCurrentSize--;
             }
         }
 
@@ -36,6 +36,7 @@ class Main {
     public static void main(String[] args) {
         BasicLinkedList<Integer> one = new BasicLinkedList<>();
         BasicLinkedList<Integer> two = new BasicLinkedList<>();
+        BasicLinkedList<Integer> common = new BasicLinkedList<>();
         Node<Integer> a = new Node<>(4, Comparator.naturalOrder());
         Node<Integer> b = new Node<>(4, Comparator.naturalOrder());
         Node<Integer> c = new Node<>(2, Comparator.naturalOrder());
@@ -53,7 +54,7 @@ class Main {
         two.add(d);
         System.out.println("BLL one: " + one.toString());
         System.out.println("BLL two: " + two.toString());
-        BasicLinkedList<Integer> common = getMatches(one, two);
+        common.add(getMatches(one, two));
         System.out.println("BLL Common: " + common.toString());
     }
 

@@ -1,0 +1,9 @@
+Given a singly linkedlist with n nodes, you need to find the middle
+node, If n is even, the middle node is the n/2th node, if n is odd, the
+middle node is the ((n+1)/2)th node.
+
+You are not allowed to use additional data structure.
+You are not allowed to count the nodes.
+You are not allowed to use the size of the list.
+You are not allowed to visit a node more then 2 times.
+You are allowed to use two or more node pointers. 

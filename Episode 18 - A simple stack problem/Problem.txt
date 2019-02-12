@@ -1,0 +1,7 @@
+Consider an empty stack of integers.Let the numbers 1,2,3,4,5,6 be pushed on to this stack only in the order they appeared from left to right.Let S indicates a push and X indicate a pop operation.Can they be permuted into the order 325641(output) and order 154623?(if a permutation is possible give the order of operations.
+
+For example, to obtain the output 654321, the order string is 
+SSSSSSXXXXXX
+
+Write a program to do this. Input to the program are the two lists of numbers. The original sorted sequence and the required output order.
+Your program should print the order string as described above. 

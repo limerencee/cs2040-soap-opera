@@ -1,0 +1,7 @@
+Suppose there is a useless method that takes a sequence of n distinct value (sorted in increasing order) and changes portions of the sequence into decreasing order. For example:
+
+Sorted sequence: 1 2 3 4 5 6 7 8 9 10
+
+After the useless function: 1 4 3 2 5 7 6 9 8 10
+
+Describe an algorithm that utilizes only a single stack and a single queue to undo the changes by useless function. The modified sequence produced by the useless function is stored in the queue initially.

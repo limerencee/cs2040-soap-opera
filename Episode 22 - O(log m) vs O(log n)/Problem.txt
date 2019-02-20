@@ -1,0 +1,8 @@
+Given an array of n positive integers sorted in descending order.
+There are only m non-zero elements and m << n; that is there
+could be much more zeroes then non-zeroes in the array.
+
+Given a value x, you are suppose to search for x in
+the array and return the index when it is found and
+return -1 otherwise. Your algorithm should not be
+worst then O(log m).
